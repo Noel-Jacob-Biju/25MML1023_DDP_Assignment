@@ -1,0 +1,15 @@
+Assignment 1: Understanding Apache Spark and Distributed Processing
+
+a) Theory
+Explain the concept of distributed data processing.
+How does Apache Spark improve performance compared to traditional data processing systems? 
+Include the role of in-memory computation.
+Ans : 
+Distributed data processing is the method of breaking down a massive dataset into smaller chunks (partitions) and processing them simultaneously across a cluster of multiple computers (nodes). Instead of one powerful machine struggling with a 1TB file, 10 machines process 100GB each in parallel.
+
+How Spark Improves Performance:
+Traditional systems like Hadoop MapReduce were "disk-bound"—they wrote data to the physical hard drive after every single map or reduce step. Spark revolutionizes this through:
+
+In-Memory Computation: Spark stores intermediate data in RAM (Random Access Memory). Since RAM is significantly faster than disk I/O, Spark can be up to 100x faster for iterative algorithms.
+
+DAG (Directed Acyclic Graph): Spark tracks the sequence of operations and creates an optimized execution plan to reduce data shuffling across the network.
